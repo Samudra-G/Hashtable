@@ -54,7 +54,9 @@ $(BUILD_DIR)/test_correctness: $(BUILD_DIR)/test_correctness.o $(BUILD_DIR)/hash
 
 # Clean build
 clean:
-	rm -rf $(BUILD_DIR)/*.o $(BUILD_DIR)/output $(BUILD_DIR)/test_*
+	rm -rf $(BUILD_DIR)
 
 # Force rebuild
 rebuild: clean all
+
+.PHONY: all clean rebuild
